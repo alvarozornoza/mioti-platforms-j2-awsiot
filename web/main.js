@@ -55,7 +55,7 @@ let myChart = Highcharts.chart('container1', {
 let getTelemetryData = function () {
     $.ajax({
         type: "GET",
-        url: "https://alvarobucketiot.s3.eu-west-3.amazonaws.com/simulator01",  //example: https://mydatabucket.s3.amazonaws.com/myKey"
+        url: "https://X.s3.eu-west-3.amazonaws.com/simulator01",  //example: https://mydatabucket.s3.amazonaws.com/myKey"
         dataType: "json",
         async: false,
         success: function (data) {
