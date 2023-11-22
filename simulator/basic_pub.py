@@ -4,12 +4,12 @@ import random
 import AWSIoTPythonSDK.MQTTLib as AWSIoTPyMQTT
 
 # Define ENDPOINT, CLIENT_ID, PATH_TO_CERT, PATH_TO_KEY, PATH_TO_ROOT, TOPIC, and RANGE
-ENDPOINT = "X.iot.eu-west-3.amazonaws.com"
-CLIENT_ID = "simulator01"
+ENDPOINT = "a2kw6fch5l483h-ats.iot.eu-west-3.amazonaws.com"
+CLIENT_ID = "alvaro-device-sub-01"
 PATH_TO_ROOT = "../certificates/AmazonRootCA1.pem"
 PATH_TO_CERT = "../certificates/certificate.pem.crt"
 PATH_TO_KEY = "../certificates/private.pem.key"
-TOPIC = "devices/simulator01/telemetry"
+TOPIC = "devices/alvaro-device-01/telemetry"
 RANGE = 200 
 
 def main():

@@ -12,7 +12,12 @@ let myChart = Highcharts.chart('container1', {
     },
 
     xAxis: {
-        categories: upArr
+        categories: upArr,
+        labels:{
+            formatter:function(){
+                return Highcharts.dateFormat('%H:%M:%S',this.value);
+            }
+         }
     },
 
     legend: {
@@ -55,7 +60,7 @@ let myChart = Highcharts.chart('container1', {
 let getTelemetryData = function () {
     $.ajax({
         type: "GET",
-        url: "https://X.s3.eu-west-3.amazonaws.com/simulator01",  //example: https://mydatabucket.s3.amazonaws.com/myKey"
+        url: "https://alvaro-bucket-01.s3.eu-west-3.amazonaws.com/alvaro-device-01",  //example: https://mydatabucket.s3.amazonaws.com/myKey"
         dataType: "json",
         async: false,
         success: function (data) {
