@@ -78,12 +78,15 @@ let drawChart = function (data) {
     let temperature = data.temperature;
     let timestamp = data.timestamp;
 
-    humArr.push(Number(humidity));
-    tempArr.push(Number(temperature));
-    upArr.push(Number(timestamp));
+    if(timestamp != upArr[upArr.length-1])
+    {
+        humArr.push(Number(humidity));
+        tempArr.push(Number(temperature));
+        upArr.push(Number(timestamp));
 
-    myChart.series[0].setData(humArr , true)
-    myChart.series[1].setData(tempArr , true)
+        myChart.series[0].setData(humArr , true)
+        myChart.series[1].setData(tempArr , true)
+    }
 }
 
 let intervalTime = 3 * 1000; // 3 second interval polling, change as you like
